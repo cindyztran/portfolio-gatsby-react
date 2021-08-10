@@ -7,17 +7,17 @@ export default function Blog() {
 
   return (
     <Layout>
-      <h1>My blog posts</h1>
+      <h1 className="project-heading">My Projects</h1>
 
       {projects.map((project => {
-        return (<div key={project.name}>
-
-          <h1>{project.name}</h1>
-          <img src={project.image} alt={project.name}/>
-          <p>{project.description}</p>
-          <div>
-            <a href={project.github}><button>GitHub</button></a>
-            <a href={project.live}><button>Live</button></a>
+        return (<div className="projects-container" key={project.name}><br/>
+          
+          <h1 style={{fontSize:16}} className="project-item">{project.name}</h1><br/>
+          <img style={{marginBottom: 20}} className="project-item" src={project.image} alt={project.name}/>
+          <p className="project-item">{project.description}</p>
+          <div className="project-item">
+            <a href={project.github}><button className="projects-btn">GitHub</button></a>
+            <a href={project.live}><button className="projects-btn">Live</button></a>
           </div>
 
         </div>)

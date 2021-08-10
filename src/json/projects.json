@@ -1,30 +1,30 @@
 [
     {
-        "name": "project name",
-        "description": "project description",
-        "image": "project image",
-        "github": "link to github repo",
-        "live": "link to deployed site"
+        "name": "Rick and Morty Character Search",
+        "description": "A simple web app for visualizing Rick and Morty character API via name.",
+        "image": "https://github.com/cindyztran/rick-and-morty/raw/master/working-app-2.png",
+        "github": "https://github.com/cindyztran/rick-and-morty",
+        "live": "https://cindyztran.github.io/rick-and-morty/"
     },
     {
-        "name": "project name",
-        "description": "project description",
-        "image": "project image",
-        "github": "link to github repo",
-        "live": "link to deployed site"
+        "name": "Workout Tracker",
+        "description": "A full-stack web app to allow users to create and track their workouts and exercises.",
+        "image": "https://github.com/cindyztran/workout-tracker/raw/master/images/landing-page.png",
+        "github": "https://github.com/cindyztran/workout-tracker",
+        "live": "https://czt-workout-tracker.herokuapp.com/"
     },
     {
-        "name": "project name",
-        "description": "project description",
-        "image": "project image",
-        "github": "link to github repo",
-        "live": "link to deployed site"
+        "name": "On Tap",
+        "description": "A MERN Stack full CRUD App to allow users to post and rate beers.    The app was created based on a vision of a social media app for users to share their local beer experiences and ratings.",
+        "image": "https://github.com/cindyztran/on-tap-frontend/raw/master/images/home-index.png",
+        "github": "https://github.com/cindyztran/on-tap-frontend",
+        "live": "https://on-tap-frontend.herokuapp.com/"
     },
     {
-        "name": "project name",
-        "description": "project description",
-        "image": "project image",
-        "github": "link to github repo",
-        "live": "link to deployed site"
+        "name": "SimplSurvey",
+        "description": "SimplSurvey is a simple application where users can choose survey questions to answer from six different categories. The application also allows for execution of a customized survey of your choosing.",
+        "image": "https://github.com/Sherryjsph3/simplsurvey_frontend/raw/master/public/imgs/SimplSurveyHomeTWO.png",
+        "github": "https://github.com/Sherryjsph3/simplsurvey_frontend",
+        "live": "https://simplsurvey-frontend.herokuapp.com/"
     }
 ]

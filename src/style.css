@@ -4,13 +4,18 @@
   box-sizing: border-box;
 }
 
-:root {
-  --title-font: serif;
-  --text-font: aerial;
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: local('Monterserrat'), url(./fonts/Montserrat-Regular.ttf) format('truetype');
+}
 
-  --primary-color: crimson;
-  --secondary-color: white;
-  --accent-color: purple;
+:root {
+  /* --title-font: serif; */
+  /* --text-font: aerial; */
+
+  --primary-color: #3f3f3f;
+  /* --secondary-color: #14BF80; */
+  --secondary-color: #8ABD91;
 }
 
 h1,
@@ -19,11 +24,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--title-font);
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: var(--text-font);
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: #7f8b93; */
+  margin-bottom: 50px;
+  background-color: #ededed;
 }
 
 /* ****************************
@@ -34,9 +42,9 @@ Layout.js - nav
   display: flex;
   color: var(--secondary-color);
   background-color: var(--primary-color);
-  padding: 5px;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
 }
 
 .nav a {
@@ -46,15 +54,21 @@ Layout.js - nav
   text-decoration: none;
   padding: 8px;
   transition: background-color 0.3s, color 0.3s;
+  height: 50px;
+  
 }
 
 .nav a:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  margin: none;
+  height: 50px;
+
 }
 
 .nav__logo {
-  font-size: 4em;
+  font-size: 2em;
+  font-weight: normal;
 }
 
 .nav__links {
@@ -63,6 +77,155 @@ Layout.js - nav
     align-items: center;
 }
 
+img {
+  height: 300px;
+  width: 500px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index-container-1{
+  margin: 0px 300px 0px 300px;
+  /* border: 3px solid; */
+
+}
+
+.index-container-2 {
+  display: flex;
+}
+.index-item {
+  display: flex;
+  padding: 10px 0px 0px 20px;
+}
+
+.index-heading-name, .project-heading {
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: #A9BD93;
+}
+.about-header, .hobbies-header, .connect-header {
+  color: #A9BD93;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.projects-btn, .submit-btn {
+  height: 30px;
+  width: 60px;
+  padding-bottom: 2px;
+  margin: 20px 1px 10px 10px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+.projects-btn:hover, .submit-btn:hover {
+  background-color: #6ba072;
+}
+
+h1, h2, h3, h4, ul, li {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+
+.index-heading {
+  padding-bottom: 20px;
+}
+
+.about-header {
+  font-size: 16px;
+  display: flex;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+.headshot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headshot {
+  margin-top: 30px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  position: fixed;
+  left:0;
+  bottom:0;
+  right:0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-image {
+  height: 30px;
+  width: 30px;
+  margin: 10px 10px 0px 0px;
+}
+
+.form-container {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container input {
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  font-family:inherit;
+  font-size: inherit;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.06);
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  margin-left: auto;
+  margin-right: auto;
+  font-family:inherit;
+  font-size: inherit;
+  
+}
+textarea {
+  font-family:inherit;
+  font-size: inherit;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.06);
+}
+
+
+/* .project-item {
+  display: flex;
+
+} */
 
 
 /* ****************************
@@ -87,11 +250,18 @@ Screens Smaller than 770px
 @media screen and (max-width: 770px){
 
     .nav__logo {
-        font-size: 2em;
+        font-size: 1.5em;
       }
 
     .nav__links {
-        font-size: 1em;
+        font-size: 1.5em;
+    }
+
+    .index-container-1{
+      margin: 0;
+    }
+    .project-item {
+      text-align: center;
     }
 }
 
@@ -102,15 +272,39 @@ Screens Smaller than 510px
 @media screen and (max-width: 510px){
 
     .nav__logo {
-        font-size: 1em;
+        font-size: 1.5em;
       }
 
     .nav__links {
-        font-size: .6em;
+        font-size: 1em;
         font-weight: bolder;
+        
     }
 
     .nav a {
         padding: 2px;
     }
+    
+    .index-heading {
+      text-align: center;
+    }
+    .index-container-1 {
+      margin: 0;
+    }
+    .about-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    img {
+      height: 250px;
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+    }
+    
+
 }
