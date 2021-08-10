@@ -1,9 +1,6 @@
 import React from "react"
 import Layout from "../layout/Layout"
 import headshot from '../images/headshot-photo.png';
-// import html_logo from '../images/html.png';
-// import css_logo from '../images/css.png'
-// import js_logo from '../images/javascript.png';
 
 export default function Blog() {
 
@@ -46,12 +43,6 @@ export default function Blog() {
           </form>
 
         </div>
-        {/* <div>
-          <img className="skill-logo" src={html_logo} alt=""/>
-          <img className="skill-logo" src={css_logo} alt=""/>
-          <img className="skill-logo" style={{width: 140}} src={js_logo} alt=""/>
-          
-        </div> */}
         
 
       </div>
