@@ -29,7 +29,8 @@ export default function Blog() {
         </div>
         <h3 className="connect-header" style={{marginBottom: 20, marginTop:20}}>LET'S CONNECT</h3>
         <div className="form-container">
-          <form type="hidden" name="contact" method="POST" data-netlify="true">
+          <form name="contact v1" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact v1"/>
             <p>
             <label>Name: </label> <input type="text" name="name"/>
             </p>
