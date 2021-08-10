@@ -2,7 +2,33 @@ import React from "react"
 import Layout from "../layout/Layout"
 import headshot from '../images/headshot-photo.png';
 
+function encode(data) {
+  return Object.keys(data)
+  .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+  .join('&')
+}
+
 export default function Blog() {
+  const [state, setState] = React.useState({})
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
+      body: encode({ 
+        'form-name': form.getAttribute('name'),
+      ...state,
+      }),
+    })
+    .then(() => alert("Success!"))
+    .catch(error => alert(error));
+  }
 
   
   return (
@@ -29,16 +55,16 @@ export default function Blog() {
         </div>
         <h3 className="connect-header" style={{marginBottom: 20, marginTop:20}}>LET'S CONNECT</h3>
         <div className="form-container">
-          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact"/>
             <p>
-            <label>Name: </label> <input type="text" name="name"/>
+            <label>Name: </label> <input type="text" name="name" onChange={handleChange}/>
             </p>
             <p>
-              <label>Email: </label><input type="email" name="email"/>
+              <label>Email: </label><input type="email" name="email" onChange={handleChange}/>
             </p>
             <p>
-              <label>Message: </label><textarea name="message" rows="4" cols="50" style={{width:300, height:200}}/>
+              <label>Message: </label><textarea name="message" rows="4" cols="50" style={{width:300, height:200}} onChange={handleChange}/>
             </p>
             <button className="submit-btn" type="submit">Send</button>
           </form>
