@@ -29,8 +29,8 @@ export default function Blog() {
         </div>
         <h3 className="connect-header" style={{marginBottom: 20, marginTop:20}}>LET'S CONNECT</h3>
         <div className="form-container">
-          <form name="contact v1" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact v1"/>
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact"/>
             <p>
             <label>Name: </label> <input type="text" name="name"/>
             </p>
